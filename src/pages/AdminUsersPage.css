@@ -1,0 +1,23 @@
+.admin-users-vertical-layout {
+  max-width: 950px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+}
+.admin-users-wide-card {
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+}
+@media (max-width: 1000px) {
+  .admin-users-vertical-layout {
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+  .admin-users-wide-card {
+    max-width: 100%;
+  }
+} 

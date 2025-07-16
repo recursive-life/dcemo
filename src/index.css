@@ -1,0 +1,148 @@
+body {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #e0e7ff 0%, #f0f9ff 50%, #e0f2fe 100%);
+  font-family: 'Inter', 'Roboto', 'Segoe UI', Arial, sans-serif;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #181c32;
+  margin-bottom: 0.5em;
+}
+
+p, label, .ui-card-description {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #1e40af;
+}
+
+input, button, select, textarea {
+  font-family: inherit;
+}
+
+.navbar {
+  background: #222;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 2rem;
+}
+.nav-logo {
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-links a, .nav-links button {
+  color: #fff;
+  background: none;
+  border: none;
+  margin-left: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover, .nav-links button:hover {
+  color: #ff9800;
+}
+
+.login-container, .register-container, .user-dashboard, .checkout-page, .user-orders-page, .admin-dashboard, .admin-products-page, .admin-users-page, .admin-orders-page {
+  background: #fff;
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.login-form, .register-form, .product-form, .user-form, .checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.login-form input, .register-form input, .product-form input, .user-form input, .checkout-form input, .checkout-form select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+button {
+  background: #ff9800;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover {
+  background: #e65100;
+}
+.error-message {
+  color: #d32f2f;
+  margin-top: 0.5rem;
+}
+.success-message {
+  color: #388e3c;
+  margin-top: 0.5rem;
+}
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+.product-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.product-card h3 {
+  margin: 0 0 0.5rem 0;
+}
+.product-card img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+.admin-table th, .admin-table td {
+  border: 1px solid #eee;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+.admin-table th {
+  background: #f5f5f5;
+}
+@media (max-width: 600px) {
+  .navbar { flex-direction: column; align-items: flex-start; }
+  .login-container, .register-container, .user-dashboard, .checkout-page, .user-orders-page, .admin-dashboard, .admin-products-page, .admin-users-page, .admin-orders-page { max-width: 98vw; padding: 1rem; }
+  .products-grid { grid-template-columns: 1fr; }
+}

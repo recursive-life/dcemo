@@ -1,0 +1,115 @@
+.navbar {
+  width: 100%;
+  background: rgba(255,255,255,0.10); /* nearly clear */
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 2.5vw;
+  box-shadow: 0 4px 24px 0 rgba(30,64,175,0.10);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-radius: 0 0 18px 18px;
+  transition: background 0.25s, backdrop-filter 0.25s;
+}
+.navbar__brand {
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #2563eb;
+  cursor: pointer;
+  user-select: none;
+}
+.navbar__links {
+  display: flex;
+  gap: 2rem;
+}
+.navbar__link {
+  color: #fff;
+  font-size: 1.08rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.18s;
+  position: relative;
+  text-shadow: 0 2px 8px rgba(30,64,175,0.10);
+}
+.navbar__link:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.2s;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+}
+.navbar__link:hover:after {
+  width: 100%;
+}
+.navbar__link:hover {
+  color: #c7d2fe;
+}
+.navbar__actions {
+  display: flex;
+  gap: 1rem;
+}
+.navbar__btn {
+  border: none;
+  border-radius: 14px;
+  padding: 0.8rem 2.1rem;
+  font-size: 1.08rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  margin: 0 0.18rem;
+  box-shadow: 0 2px 8px rgba(30,64,175,0.10);
+  border: 1.5px solid rgba(30,64,175,0.10);
+  background-clip: padding-box;
+  outline: none;
+  position: relative;
+  z-index: 1;
+}
+.navbar__btn--home,
+.navbar__btn--products,
+.navbar__btn--admin {
+  margin: 0 0.25rem;
+}
+.navbar__btn--home:hover,
+.navbar__btn--products:hover,
+.navbar__btn--admin:hover {
+  box-shadow: 0 4px 18px 0 rgba(30,64,175,0.13), 0 1.5px 6px rgba(30,64,175,0.07);
+  background: #e0e7ff;
+  color: #181c32 !important;
+}
+.navbar__btn--primary {
+  background: rgba(255,255,255,0.18);
+  color: #2563eb;
+}
+.navbar__btn--primary:hover {
+  background: #e9f0fb;
+  color: #1e40af;
+}
+.navbar__btn--outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.navbar__btn--outline:hover {
+  background: rgba(37,99,235,0.10);
+  color: #fff;
+}
+@media (max-width: 700px) {
+  .navbar__links {
+    display: none;
+  }
+  .navbar__actions {
+    gap: 0.5rem;
+  }
+  .navbar__brand {
+    font-size: 1.3rem;
+  }
+} 
